@@ -7,9 +7,9 @@ addEventListener("fetch", (event) => {
     message: "Hello from Deno Deploy",
     url: event.request.url,
     method: event.request.method,
-    proto: event.request.proto
-    //headers: Object.fromEntries(evnet.request.headers.entries())
-  });
+    proto: event.request.proto,
+    headers: Object.fromEntries(evnet.request.headers.entries())
+  }, null, 2);
 
 
   const response = new Response(json, {
