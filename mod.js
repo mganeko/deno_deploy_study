@@ -8,7 +8,7 @@ addEventListener("fetch", (event) => {
     url: event.request.url,
     method: event.request.method,
     proto: event.request.proto,
-    headers: Object.fromEntries(evnet.request.headers.entries())
+    headers: Object.fromEntries(event.request.headers.entries())
   }, null, 2);
 
 
